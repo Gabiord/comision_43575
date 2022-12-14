@@ -1,0 +1,63 @@
+- React : Libreria 
+
+- Node.js : Entorno de ejecución para JavaScript, viene con un sub programa que me permite instalar paquetes(librerias/plugins/frameworks) de node
+
+- NPM : Node Package Manager, gestor de paquetes de node (como el PIP de python, o el composer de php, o el, o el gem de ruby, el maven de java, etc)
+
+    Instalacion con NPM : 
+
+
+        npm {install|i} [tipo] {nombre_paquete}
+
+        TIPOS DE INSTALACION 
+            Locales (default) : Instalacion en el directorio actual
+                -S | --save 
+                -D | --save-dev
+
+            Ejemplos : 
+                npm i -D react
+                npm i -S react
+
+            Globales
+
+                -g | --global
+
+            Ejemplos :
+
+                npm i -g react
+
+
+- create-react-app : Herramienta para crear aplicaciones de React. Instala babel y webpack y los configura automaticamente
+
+- Transpilador : Babel
+
+- Empaquetador (Bundler) : Webpack
+
+JSX : Sintaxis de React <p>
+
+bundle.js : Archivo que contiene todo el código de la aplicación
+
+
+optimización (acota variables) y minimización de código
+CLI : Interfaz de línea de comandos
+GUI : Interfaz gráfica de usuario
+
+Chocolatey : Administrador de paquetes para Windows
+
+https://www.youtube.com/watch?v=X34ZmkeZDos&ab_channel=JomaTech
+
+
+
+
+METODO 1
+1) npm i -g create-react-app
+2) create-react-app {nombre_proyecto}
+3) cd {nombre_proyecto}
+4) npm start (live server)
+
+
+
+METODO 2
+1) npx create-react-app {nombre_proyecto}
+2) cd {nombre_proyecto}
+3) npm start (live server)
