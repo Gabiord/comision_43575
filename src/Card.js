@@ -1,8 +1,8 @@
-function Card() {
+const Card = () => {
     return (
-        <article id="card" className="card">
-            <h1>Card</h1>
-            <p>Card description</p>
+        <article>
+            <h2>Card</h2>
+            <p>Card content</p>
         </article>
     )
 }

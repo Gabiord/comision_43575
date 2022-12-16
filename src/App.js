@@ -1,14 +1,12 @@
 import Card from "./Card"
 
-function App() {
-
+const App = () => {
     return (
         <>
             <Card/>
-            {/* <Card></Card> */}
+            <Card></Card>
         </>
     )
 }
 
-
-export default App;
+export default App
