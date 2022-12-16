@@ -9,5 +9,5 @@ html , body , #root  {
 }
 
 #root {
-    
+    display: flex;
 }
