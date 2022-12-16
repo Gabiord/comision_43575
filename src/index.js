@@ -1,17 +1,32 @@
+//Estas dos son librerias de react y react-dom
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+
+//Esto es una variable que yo creo, tiene que ser un componente de react
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './index.css'
+//Los componentes en react siempre son funciones que arrancan con la primera letra en mayuscula y tienen que retornar algo
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+/* 
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+class App extends React.Component {
+  render(){
+    return "Hola Mundo"
+  }
+} 
+
+*/
+
+/* const App = () => {
+  return "Hola Mundo por las dudas"
+} */
+
+/* function App(){
+  //return ?
+}
+ */
+
+//Uso la libreria de react-dom para renderizar el componente App en el elemento con id root (que esta en el index.html en public/)
+const root = ReactDOM.createRoot(document.querySelector('#root'));
+
+root.render(<App/>);

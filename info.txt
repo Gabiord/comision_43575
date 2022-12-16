@@ -61,3 +61,54 @@ METODO 2
 1) npx create-react-app {nombre_proyecto}
 2) cd {nombre_proyecto}
 3) npm start (live server)
+
+
+
+CREATE-REACT-APP y WEBPACK : 
+
+Todos los proyectos arrancan con un archivo index.js que es el punto de entrada de la aplicación. Este archivo se encarga de importar el resto de archivos de la aplicación y de renderizarlos en el DOM.
+
+
+VITE : 
+
+Todos los proyectos arrancan con un archivo main.jsx
+
+
+
+
+
+
+JSX : 
+
+
+function foo(a){
+
+}
+
+foo()  === <foo/>  === <foo></foo>
+
+function Header(){
+    return <h1>Titulo</h1>
+}
+
+
+
+
+<header/>
+
+<Header/>
+
+
+
+COMPONENTES : 
+
+1 - Son funciones
+2 - Estan en mayuscula
+3 - Tienen retorno
+4 - Tienen un solo elemento de retorno
+
+
+
+PARA LA PROXIMA CLASE!
+
+//Decirle a Carlos que es el article!
