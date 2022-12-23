@@ -112,3 +112,191 @@ COMPONENTES :
 PARA LA PROXIMA CLASE!
 
 //Decirle a Carlos que es el article!
+
+
+
+PARA EL PROYECTO : 
+
+src/
+    |_index.js
+    |__ components/
+        |__ App.js
+        |__ Header.js
+        |__ Footer.js
+        |__ Main.js
+        |__ Counter.js
+        |__ Button.js
+        |__ Input.js
+        |__ Search.js
+        |__ Nav.js
+
+
+
+
+
+PARA LA VIDA REAL SEGUN EL PROFE : 
+
+src/
+    |_api
+        |_axios/
+            |_axios.js
+        |_providers/
+            |_AuthProvider.js
+            |_ThemeProvider.js
+            |_MessagesProvider.js
+    |_ui/
+       |_layout/
+            |_App.js
+            |_Header.js
+            |_Footer.js
+            |_Main.js
+    
+        |_pages/
+            |_Home.js
+            |_About.js
+            |_Contact.js
+            |_Login.js
+            |_Register.js
+            |_NotFound.js
+        |_widgets|components/
+            |_Counter.js
+            |_NavBav.js
+            |_Search.js
+            |_Button.js
+            |_Input.js
+
+
+
+SNIPPET PARA COMPONENTES :  "rafce"
+
+
+SASS / BEM
+
+Bootstrap 
+
+https://react-bootstrap.github.io/
+https://reactstrap.github.io/?path=/story/home-installation--page
+
+TailwindCSS - Antd - MUI
+
+
+TIPOS DE COMPONENTES : 
+
+    - Estructurales : Representan grandes partes de la aplicacion (Header, Footer, Main, etc)
+    - Reusabilidad : 
+    - Funcionalidad : 
+        - Container Pattern : 
+                - Container 
+                - Presentacionales
+
+
+
+Reutilizables y Dinamicas
+
+
+
+
+function Nav(parametros){
+
+}
+
+
+Nav({x:1})
+Nav({z:2, y:3})
+
+
+DESTRUCTURING : 
+
+    tengo un objeto con propiedades, las quiero usar a todas pero escribir menos
+    tengo un array con valores, las quiero usar a todas pero escribir menos
+
+
+const nombre = "Carlos"
+const apellido = "Gonzalez"
+const edad = 30
+
+const arr = [x,y,z]
+
+const [monstrutroDeLaRama,monstruoTerrenal] = arr
+
+const monstrutroDeLaRama = arr[0]
+const dos = arr[1]
+const tres = arr[2]
+
+
+
+
+
+
+
+
+
+
+
+const obj = {x:1, y:2, z:3}
+
+const {propYaExt:variableNueva} = obj
+
+
+//Si hubiera una propiedad llamada "y"(izquierda) en el objeto, la asignaria a la variable "y"(derecha)
+
+const {y:y,x:x,z:z} = obj
+
+const x = obj.x
+const y = obj.y
+const z = obj.z
+
+
+
+
+
+
+
+Object Properties Shorthand :
+
+const nombre = "Horacio"
+
+const persona = {
+    nombre : nombre (?
+}
+
+
+const persona = { nombre }
+
+const {y:y,x:x,z:z} = obj
+const {y,x,z} = obj
+
+
+PWA : Progressive Web Apps
+
+
+
+
+class App {
+    constructor(){
+        this.state = {
+           nombre : "Carlos"
+        }
+    }
+}
+
+
+const App = () => {
+
+}
+
+
+
+Listado de Hooks de react : 
+
+    - useState :
+
+        Siempre me retorna un array 
+
+    - useRef
+    - useReducer 
+    
+    - useContext
+    - useEffect
+    - useCallback
+    - useMemo
