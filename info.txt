@@ -305,11 +305,11 @@ Listado de Hooks de react :
         useState("horacio")  => ["horacio",()=>{}]
 
 
+    - useReducer : Me da un estado reactivo nuevo en un componente
 
 
 
     - useRef : Me da un estado no reactivo nuevo en un componente
-    - useReducer 
     
     
     - useEffect : Controla el "ciclo de vida" de un componente. Por default , se ejecuta cada vez que el componente se renderiza.
