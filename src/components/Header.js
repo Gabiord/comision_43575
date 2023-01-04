@@ -1,23 +1,20 @@
 import Nav from "./Nav"
 
-const Header = () => {
+const Header = ({children}) => {
 
     const isHeader = true
 
     return (
-        <header className="header">
-            <h1 className="header__title">Titulo</h1>
-            {/* 
-            
-            Nav({
-                isHeader: true
-            })
-            
-            */}
-            <Nav 
-                isHeader={isHeader}
-            />
-        </header>
+        <>
+            <header className="header">
+                <h1 className="header__title">Titulo</h1>
+                {children}
+                <Nav
+                    isHeader={isHeader}
+                />
+            </header>
+            <Nav />
+        </>
     )
 }
 

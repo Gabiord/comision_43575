@@ -1,24 +1,12 @@
 import Nav from "./Nav"
 
 const Footer = () => {
-
     return (
         <footer>
             <p>Copyright &copy; 2022</p>
-
-            {/* 
-            
-            Nav({
-                textLinkFooter: "Twitter",
-                hrefLinkFooter: "https://www.facebook.com/"
-            })
-            
-            */}
             <Nav
-                //{
-                textLinkFooter="Twitter" //,
+                textLinkFooter="Twitter"
                 hrefLinkFooter="https://www.facebook.com/"
-                //}
             />
         </footer>
     )

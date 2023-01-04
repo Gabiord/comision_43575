@@ -1,65 +1,52 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+
 
 const ItemListContainer = (props) => {
 
-    //variables de estado (estado de un componente|state) : Son variables que mantienen valores en un componente. En componentes de tipo funcion, se crean con hooks
+    const [cargo, setCargo] = useState(false)
+    const [productos,setProductos] = useState([])
 
-    //Hooks : Son funciones que nos permiten tener una nueva funcionalidad adentro del componente
-
-    //let loading = true
-    //let res = []
-    //let error = ""
-    //let contador = 0
-    //contador = "Hola"
-
-    /* 
     
-    const miEstado = useState(0)
-    const contador = miEstado[0]
-    const cambiarContador = miEstado[1] 
-    
-    */
+    useEffect(() => {
 
-    const [contador, setContador] = useState(0)
+        //Lo que pasa aca es asincronico
+        //operacioX() //Es una operacion muy costosa  por tiempo , por peso , por complejidad,  como pedir algo a la base de datos
+        console.log("Pido algo a la base de datos")
 
-    //cambiarContador(1) Asincronico | Si se puede hacer 
-    //contador = 1 Sincronico | No se puede hacer | No se puede cambiar el valor de una variable de estado directamente
+        setTimeout(() => {
 
-    //const handleClick = () => {}
-    //const button = document.querySelector("button")
-    //button.addEventListener("click", () => {})
-    //button.addEventListener("click", handleClick)
+            console.log("Termino de pedir algo a la base de datos")
+            
+            const ejemploProductos = [
+                {id:1, nombre:"Producto 1", precio:100},
+                {id:2, nombre:"Producto 2", precio:200},
+                {id:3, nombre:"Producto 3", precio:300}
+            ]
 
-    const handleClick = () => {
-        //console.log("click")
-        //contador++
-        //contador = contador + 1
-        //setContador(contador++)
-        //contador += 1
-        //setContador(contador+=1)
-        setContador(contador + 1)
-    }
+            //const copiaProductos = [...productos]
+            //const copiaProductos = productos.slice(0)
+            //const copia = productos
+
+            /* ejemploProductos.forEach(producto=>{
+                //productos.push(producto)
+                copia.push(producto)
+            }) */
+            
+            setCargo(true)
+            setProductos(ejemploProductos)
+            //setProductos(copiaProductos)
+
+        }, 2000)
+
+    },[])
 
     return (
         <div>
-            {props.greeting}
-            <p>Contador : {contador}</p>
-            <button onClick={handleClick} >sumar</button>
+            {!cargo ? "Cargando..." : "Termino de cargar"}
+            {cargo ? "Termino de cargar" : "Cargando..."}
         </div>
     )
 }
 
 
 export default ItemListContainer
-
-
-
-let contador = 0
-const p = document.querySelector("p")
-const button = document.querySelector("button")
-
-
-button.addEventListener("click", () => {
-    contador++
-    p.innerText = contador
-})

@@ -289,14 +289,163 @@ const App = () => {
 
 Listado de Hooks de react : 
 
-    - useState :
+    - useState : Me da un estado reactivo nuevo en un componente
 
         Siempre me retorna un array 
 
-    - useRef
+
+        useState()  =>   [a,b]  == el useState siempre que se ejecuta me da un array con dos cosas. La primera se llena con lo que esta entre parentesis y la segunda se llena con una funcion anonima que me permite cambiar el valor de a
+
+        ej : 
+
+        useState()  => [undefined,()=>{}]
+
+        useState(0)  => [0,()=>{}]
+
+        useState("horacio")  => ["horacio",()=>{}]
+
+
+
+
+
+    - useRef : Me da un estado no reactivo nuevo en un componente
     - useReducer 
     
+    
+    - useEffect : Controla el "ciclo de vida" de un componente. Por default , se ejecuta cada vez que el componente se renderiza.
+
+        ej : 
+
+            useEffect(a [,b]) =>  useEffect(funcion,array)
+            useEffect(funcion,array de dependencias)
+
+            const handleAlgo = () => {}
+
+
+            useEffect(()=>{}) : Este ejectuca su parametro a tantas veces como el componente se reejecute
+            useEffect(handleAlgo)
+
+            useEffect(()=>{},[]) : Este ejecuta su parametro a una unica vez, solo cuando el componente se monto
+
+            useEffect(()=>{},[nombre]) : Este ejecuta su parametro a cada vez que el valor de nombre cambie
+
+
     - useContext
-    - useEffect
+
     - useCallback
     - useMemo
+
+
+
+CICLO DE VIDA : 
+
+
+MOUNT / Montado / Montaje
+
+    - constructor
+    - render
+    - componentDidMount
+
+
+UPDATE / Actualizacion : 
+
+    Puede pasar por los siguientes factores : 
+
+        - Cambio de estado
+        - Cambio de props
+        - Cambio de contexto
+        - Cambio de padre
+
+
+
+    - render
+    - componentDidUpdate
+
+
+UNMOUNT / Desmontado / Desmontaje
+
+    - componentWillUnmount
+
+
+
+
+
+
+class App extends React.Component {
+
+    constructor(){}
+
+    
+
+    render(){}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+import { useEffect, useState } from "react"
+
+const ItemListContainer = (props) => {
+
+    const [counter, setCounter] = useState(0) 
+
+    const [minPrice, setMinPrice] = useState(1000)
+    const [open, setOpen] = useState(false)
+    const [loadMore, setLoadMore] = useState(false)
+    const [searchText, setSearchText] = useState("")
+
+
+    useEffect(()=>{
+        console.log("useEffect")
+    })
+
+
+
+    const handleClick = () => {
+        setCounter(counter + 1)
+    }
+
+    const handleOnChange = (e) => {
+        setSearchText(e.target.value)
+    }
+
+    const handleToggleDrawer = () => {
+        setOpen(!open)
+    }
+
+    return (
+        <div>
+            {props.greeting}
+            <p>Contador : {counter}</p>
+            <p>Texto a buscar : {searchText}</p>
+            <p>Drawer Open : {open ? "Abierto" : "Cerrado"}</p>
+            <button onClick={handleClick} >sumar</button>
+            <button onClick={handleToggleDrawer}>toggle drawer</button>
+            <input onChange={handleOnChange} type="text" />
+        </div>
+    )
+}
+
+
+export default ItemListContainer
+
+
+
+
+
+
+
+document.addEventListener("click",()=>{
+    console.log("1")
+})
+
+console.log("2")

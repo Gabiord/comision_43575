@@ -1,12 +1,6 @@
 const Nav = (props) => {
 
-    //const { isHeader : isHeader } = props
     const { isHeader, textLinkFooter, hrefLinkFooter } = props
-
-    //console.log(props.isHeader)
-    /* const isHeader = props.isHeader || false
-    const textLinkFooter = props.textLinkFooter || ""
-    const hrefLinkFooter = props.hrefLinkFooter || "" */
 
     if (isHeader) {
         return (

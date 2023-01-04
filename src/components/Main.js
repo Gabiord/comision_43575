@@ -4,8 +4,7 @@ const Main = () => {
     return (
         <main>
             <h2>Home</h2>
-            {/* <img src="https://picsum.photos/200/300"/> */}
-            <ItemListContainer/>
+            <ItemListContainer />
         </main>
     )
 }
