@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Nav from "./Nav"
 
 const Header = ({children}) => {
@@ -7,7 +8,9 @@ const Header = ({children}) => {
     return (
         <>
             <header className="header">
-                <h1 className="header__title">Titulo</h1>
+                <Link to="/">
+                    <h1 className="header__title">Titulo</h1>
+                </Link>
                 {children}
                 <Nav
                     isHeader={isHeader}
