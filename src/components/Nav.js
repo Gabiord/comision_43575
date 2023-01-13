@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 const Nav = (props) => {
 
@@ -7,11 +7,11 @@ const Nav = (props) => {
     if (isHeader) {
         return (
             <nav className="header__navbar">
-                <Link className="header__link" to="/productos/electronicos">electronicos</Link>
-                <Link className="header__link" to="/productos/ropa">ropa</Link>
-                <Link to="/carrito">
+                <NavLink className="header__link" to="/productos/electronicos">electronicos</NavLink>
+                <NavLink className="header__link" to="/productos/ropa">ropa</NavLink>
+                <NavLink to="/carrito">
                     <span className="material-icons">shopping_cart</span>
-                </Link>
+                </NavLink>
             </nav>
         )
     } else {
