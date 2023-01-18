@@ -2,13 +2,13 @@ import Item from "./Item"
 
 const ItemList = ({productos}) => {
     return (
-        <div>
+        <section className="product-container">
             {productos.map((producto) => {
                 return (
                     <Item producto={producto} key={producto.id}/>
                 )
             })}
-        </div>
+        </section>
     )
 }
 
