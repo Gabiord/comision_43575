@@ -1,18 +1,29 @@
-import { createContext } from "react"
+import { createContext, useState } from "react"
 
-const contexto = createContext()
-const Provider = contexto.Provider //El Provider le da el valor definitivo al contexto
-//Ademas, desde donde este ubicado, todos los children pueden acceder a este valor
-
-//const Consumer = contexto.Consumer //El Consumer consumer el valor del contexto
-//hoy por hoy para leer el valor del contexto se usa un hook useContext
+export const contexto = createContext()
+const Provider = contexto.Provider 
+//el contexto se lee asi : 
+//import {useContext} from "react"
+// const valorDelContexto = useContext(objetoContexto)
 
 const CustomProvider = ({children}) => {
 
+    const [edad,setEdad] = useState(0)
+
+    const cambiarEdad = (nuevaEdad) => {
+        //mas logica aca
+        setEdad(nuevaEdad)
+    }
+    
+
     const valorDelContexto = {
         carrito : [],
-        totalProductos : 0
+        totalProductos : 0,
+        edad : edad,
+        cambiarEdad : cambiarEdad
     }
+
+
 
     return (
         <Provider value={valorDelContexto}>

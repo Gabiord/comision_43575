@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
 import ItemList from "./ItemList"
 
 const ItemListContainer = () => {
@@ -7,26 +6,7 @@ const ItemListContainer = () => {
     const [load, setLoad] = useState(false)
     const [productos,setProductos] = useState([])
     
-    //const props = useParams()
-    //console.log(props.categoria)
-
     useEffect(() => {
-
-        //async = asincronica
-        //mock = simulacion
-       /*  newPromise(()=>{
-            setTimeout(()=>{
-                setLoad(true)
-            },2000)
-        }) */
-
-/* 
-        new Promise(()=>{
-            setTimeout(()=>{
-                setLoad(true)
-            },2000)
-        })
- */
 
         const pedido = fetch("https://fakestoreapi.com/products")
 
@@ -37,7 +17,6 @@ const ItemListContainer = () => {
 
             })
             .then((productos) => {
-                //productos.filter(props.categoria) 
                 setProductos(productos)
                 setLoad(true)
             })
