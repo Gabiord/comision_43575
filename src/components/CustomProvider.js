@@ -1,29 +1,52 @@
-import { createContext, useState } from "react"
+import { createContext, useContext, useState } from "react"
 
-export const contexto = createContext()
-const Provider = contexto.Provider 
-//el contexto se lee asi : 
-//import {useContext} from "react"
-// const valorDelContexto = useContext(objetoContexto)
+const contexto = createContext()
+const Provider = contexto.Provider
 
-const CustomProvider = ({children}) => {
 
-    const [edad,setEdad] = useState(0)
+export const useCarrito = () => {
+    const valorDelContexto = useContext(contexto)
+    return valorDelContexto
+}
 
-    const cambiarEdad = (nuevaEdad) => {
-        //mas logica aca
-        setEdad(nuevaEdad)
+const CustomProvider = ({ children }) => {
+
+    const [carrito, setCarrito] = useState([])
+    const [totalProductos, setTotalProductos] = useState(0)
+
+
+    const agregarProducto = (producto, cantidad) => {
+       
+        //const copia = []
+        //carrito.forEach(p=>copia.push(p))
+        
+       /*  const copia = [ ...arr ]
+        copia.push(producto) */
+        //setCarrito(copia)
+
+        //setCarrito()
     }
-    
+
+    const eliminarProducto = (id) => { }
+
+    //const modifcarCantidad = () => {}
+
+    const vaciarCarrito = () => {
+        setCarrito([])
+    }
+
+    const estaEnCarrito = (id) => {
+        //return true|false
+    }
+
 
     const valorDelContexto = {
-        carrito : [],
-        totalProductos : 0,
-        edad : edad,
-        cambiarEdad : cambiarEdad
+        carrito: carrito,
+        totalProductos: totalProductos,
+        /*  setCarrito : setCarrito , 
+         setTotalProductos : setTotalProductos */
+        agregarProducto: agregarProducto
     }
-
-
 
     return (
         <Provider value={valorDelContexto}>

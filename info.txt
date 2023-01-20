@@ -695,3 +695,23 @@ export default ItemListContainer
 
 
 useEffect , useMemo , useCallback 
+
+
+
+
+/* carrito = 1
+        carrito.push()
+        const copia = carrito
+        copia.push() */
+
+        //const copia = carrito.slice(0)
+        //copia.push(producto)
+
+        //OPERADOR REST/SPREAD (...)
+
+        //const arr = [1,2,3]
+
+        //const copia = [ arr ] //[[1,2,3]]
+
+        //setCarrito(carrito = 1)
+        //setCarrito(carrito.push())
