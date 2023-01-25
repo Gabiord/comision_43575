@@ -715,3 +715,13 @@ useEffect , useMemo , useCallback
 
         //setCarrito(carrito = 1)
         //setCarrito(carrito.push())
+
+
+
+https://firebase.google.com/docs/reference/js?authuser=0&hl=en
+
+
+https://firebase.google.com/docs/reference/js/firestore_.md?authuser=0&hl=en#@firebase/firestore
+
+
+doc - getDoc - getDocs - where - query - collection - addDoc

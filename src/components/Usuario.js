@@ -8,4 +8,5 @@ const Usuario = ({ usuario }) => {
         <div>{usuario.nombre} - {usuario.email}</div>
     )
 }
+
 export default memo(Usuario)

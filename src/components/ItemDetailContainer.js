@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom"
+import { db } from "../firebase"
 import ItemDetail from "./ItemDetail"
+
 
 const ItemDetailContainer = () => {
 

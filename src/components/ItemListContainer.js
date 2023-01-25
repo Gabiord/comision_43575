@@ -1,5 +1,10 @@
+import { collection , getDocs } from "firebase/firestore"
+import { db } from "../firebase"
 import { useEffect, useState } from "react"
 import ItemList from "./ItemList"
+
+
+
 
 const ItemListContainer = () => {
 
@@ -9,6 +14,18 @@ const ItemListContainer = () => {
     useEffect(() => {
 
         const pedido = fetch("https://fakestoreapi.com/products")
+        const productosCollection = collection(db,"productos")  //CollectionReference/Query
+        //getDocs(Query,...)
+        const pedidoFirestore = getDocs(productosCollection)
+
+        pedidoFirestore
+            .then((respuesta)=>{
+                console.log(respuesta)
+            })
+            .catch((error)=>{
+                console.log(error)
+            })
+
 
         pedido
             .then((respuesta) => {
