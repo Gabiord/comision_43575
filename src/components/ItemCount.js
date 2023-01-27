@@ -1,8 +1,9 @@
 import { useState } from "react"
 
-const ItemCount = ({stock , onAdd}) => {
+const ItemCount = ({stock , onAdd }) => {
 
   const [contador, setContador] = useState(1)
+  //const {carrito} = useContext(contexto)
 
   const handleSumar = () => {
     if(contador < stock){

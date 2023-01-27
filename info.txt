@@ -718,6 +718,12 @@ useEffect , useMemo , useCallback
 
 
 
+
+
+
+
+
+
 https://firebase.google.com/docs/reference/js?authuser=0&hl=en
 
 
@@ -725,3 +731,84 @@ https://firebase.google.com/docs/reference/js/firestore_.md?authuser=0&hl=en#@fi
 
 
 doc - getDoc - getDocs - where - query - collection - addDoc
+
+
+Paso a paso de pedidos a firebase : 
+
+
+1) Entro a la pagina de firebase : npm i firebase
+2) Hago login a la consola : initializeApp() => FirebaseApp
+3) Hago click en Firestore al costado : getFirestore(FirebaseApp) => Firestore
+4) Selecciono la coleccion a trabajar : collection(Firestore,nombre) => CollectionReference
+5) Hago la consultas : getDocs , getDoc , updateDoc , deleteDoc , addDoc (ABM|CRUD)
+
+const pedido = getDocs(CollectionReference,query) => Promise
+const pedido = getDoc(?) => Promise
+const pedido = updateDoc(CollectionReference,docId,datos) => Promise
+const pedido = deleteDoc(CollectionReference,docId) => Promise
+const pedido = addDoc(CollectionReference,datos) => Promise
+
+
+
+
+
+
+
+
+
+
+
+
+
+class App {
+
+    constructor(props){
+        this.state = {
+            nombre: "Juan",
+            apellido: "Perez"
+        }
+    }
+
+    componentDidMount(){state
+        this.setState({})
+    }
+
+    shouldComponentUpdate(){}
+
+    componentDidUpdate(){}
+
+    componentWillUnmount(){}
+
+    render(){
+
+    }
+
+}
+
+
+
+
+
+
+function App (props){
+
+    useEffect(()=>{
+
+    },[])
+
+    return (
+        <></>
+    )
+}
+
+
+const App = (props) => {
+
+    useEffect(()=>{
+
+    },[])
+
+    return (
+        <></>
+    )
+}

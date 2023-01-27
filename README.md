@@ -1,6 +1,14 @@
-# MARKDOWN
-## subtitulo
+# DOCUMENTACION DE LA APP    
 
-soy un parrafo 
 
-https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+En este documento voy a poner los segmentos minimos que tiene que tener la documentacion : 
+
+* Descripcion de la app 
+* Uso e Instalacion
+
+```
+> git clone http://
+```
+
+* Tecnologias usadas
+* Screenshots/GIF/deploy

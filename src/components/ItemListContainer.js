@@ -4,8 +4,6 @@ import { useEffect, useState } from "react"
 import ItemList from "./ItemList"
 
 
-
-
 const ItemListContainer = () => {
 
     const [load, setLoad] = useState(false)
@@ -20,7 +18,10 @@ const ItemListContainer = () => {
 
         pedidoFirestore
             .then((respuesta)=>{
-                console.log(respuesta)
+                respuesta.docs.forEach(doc=>{
+                    //console.log(doc) Es una representacion del doc
+                    console.log(doc.data())// Es el contenido del doc
+                })
             })
             .catch((error)=>{
                 console.log(error)
