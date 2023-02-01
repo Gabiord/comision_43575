@@ -12,6 +12,7 @@ const Main = () => {
                 <Route path="/productos/:categoria" element={<ItemListContainer />} />
                 <Route path="/item/:id" element={<ItemDetailContainer />} />
                 <Route path="/carrito" element={<Carrito />} />
+                {/* <Route path="/orden/:id" element={<OrdenesContainer />} /> */}
             </Routes>
         </main>
     )

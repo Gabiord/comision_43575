@@ -1,16 +1,7 @@
+import { addDoc, collection , serverTimestamp } from "firebase/firestore"
 import { useState } from "react"
 import { db } from "../firebase"
 import UsuariosList from "./UsuariosList"
-
-
-/* 
-
-useMemo (hook) : sirve para memorizar una variable (no funcion)
-useCallback (hook) : sirve para memorizar una variable que sean funciones
-memo (HoC) : 
-
-*/
-
 
 
 const Carrito = () => {
@@ -20,13 +11,28 @@ const Carrito = () => {
     const [usuarios,setUsuarios] = useState([])
 
     const handleClick = (e) => {
-        let copia = [...usuarios]
-        const usuario = {
-            nombre: nombre,
-            email: email
+        
+        const orden = {
+            usuario : {
+                nombre : "Horacio",
+                email : "horacio@test.com",
+                telefono : "555555555"
+            },
+            productos : [],
+            fecha : serverTimestamp()
         }
-        copia.push(usuario)
-        setUsuarios(copia)
+
+        const ventasCollection = collection(db,"ventas")
+        const pedido = addDoc(ventasCollection,orden)
+
+        pedido
+        .then((resultado)=>{
+            console.log(resultado.id)
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+
     }
     
     
@@ -39,9 +45,6 @@ const Carrito = () => {
         setEmail(e.target.value)
     }
     
-    
-    console.log("Render")
-
     
     return (
         <div>

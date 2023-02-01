@@ -749,6 +749,11 @@ const pedido = deleteDoc(CollectionReference,docId) => Promise
 const pedido = addDoc(CollectionReference,datos) => Promise
 
 
+productos.forEach(producto=>{
+    addDoc(productsCollection,producto)
+})
+
+
 
 
 
@@ -812,3 +817,14 @@ const App = (props) => {
         <></>
     )
 }
+
+
+
+
+
+TOASTIFY IMPLEMENTACION : 
+
+1) instalar la libreria
+2) importar la hoja de estilos
+3) poner el componente ToastContainer
+4) toast()
