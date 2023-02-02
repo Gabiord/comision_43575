@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom"
+import { BrowserRouter } from "react-router-dom"; 
 import CustomProvider from "./CustomProvider"
 import Footer from "./Footer"
 import Header from "./Header"

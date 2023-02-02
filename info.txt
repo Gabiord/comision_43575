@@ -828,3 +828,19 @@ TOASTIFY IMPLEMENTACION :
 2) importar la hoja de estilos
 3) poner el componente ToastContainer
 4) toast()
+
+source / md /  gif/video/gif-imagenes en doco/link al deploy en la doco
+
+
+4 - documentacion
+
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+
+    - Descripcion del proyecto 
+    - Tecnologias usadas
+
+GIF/Video
+
+1 - build  
+2 - deploy
+3 - .env

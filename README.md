@@ -1,6 +1,5 @@
 # DOCUMENTACION DE LA APP    
 
-
 En este documento voy a poner los segmentos minimos que tiene que tener la documentacion : 
 
 * Descripcion de la app 
@@ -11,4 +10,7 @@ En este documento voy a poner los segmentos minimos que tiene que tener la docum
 ```
 
 * Tecnologias usadas
-* Screenshots/GIF/deploy
+
+
+
+[click aqui](http://google.com)
